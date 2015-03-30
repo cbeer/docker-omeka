@@ -1,0 +1,11 @@
+web:
+  build: .
+  links:
+  - db
+  ports:
+  - "49195:80"
+  env_file: .env
+
+db:
+  image: mysql
+  env_file: .env
